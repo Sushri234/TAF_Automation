@@ -7,6 +7,7 @@ import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -22,8 +23,8 @@ import com.mohs10.ActionDriver.XLUtils;
 
 	public class CommonFuns {
 		public Actionitem aaDriver;
-		public Action aDriver;
-		public WebDriver driver;
+		public static Action aDriver;
+		public static WebDriver driver;
 		
 		public CommonFuns()
 		{
@@ -122,14 +123,17 @@ import com.mohs10.ActionDriver.XLUtils;
 			return headings;
 		}
 		
-			public String Validate_Readlink(String URL) throws Exception {
+			public static void Validate_Readlink(String URL) throws Exception {
 			StartBrowser.childTest = StartBrowser.parentTest.createNode("Validate read_link");
 			aDriver.navigateToApplication(URL);
 			aDriver.click(HomePage.Read_Link, "click on read link");
 			// Scroll Down
-			aaDriver.Scroll_down(HomePage.Scroll);
+//			aDriver.Scroll_down(HomePage.Scroll);
+			
+			Actions a = new Actions(driver);
+					a.sendKeys(Keys.PAGE_DOWN).perform();
 
-			String conclusion = aDriver.getText(HomePage.Conclusion, "Conclusion Text");
+//			String conclusion = aDriver.getText(HomePage.Conclusion, "Conclusion Text");
 
 			aDriver.click(HomePage.Like_button, "click on read link");
 			System.out.println("Thanks you! Liked this");
@@ -139,7 +143,7 @@ import com.mohs10.ActionDriver.XLUtils;
 			// Click on search button without entering anything
 			aDriver.click(HomePage.Search1, "Search for keyword");
 
-			return conclusion;
+//			return conclusion;
 		}
 	
   //**************************************ShowCase series page***************************************

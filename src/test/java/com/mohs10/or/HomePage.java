@@ -33,7 +33,7 @@ public class HomePage {
 	public static By Heading =By.xpath("//h1[@class='page-title ast-archive-title']");
 	
 	public static By Read_Link =By.xpath("//p[@class='read-more']//a[@href='https://testautomationforum.com/unleash-quality-and-performance-empowering-mobile-app-testing-with-appium/']");
-	public static By Scroll =By.xpath("//p[16]//b[1]//span[1]");
+//	public static By Scroll =By.xpath("//p[16]//b[1]//span[1]");
 	public static By Conclusion =By.xpath("//p[16]//b[1]//span[1]");
 	
 	public static By Like_button= By.xpath("//button[@aria-label='Like Button']");

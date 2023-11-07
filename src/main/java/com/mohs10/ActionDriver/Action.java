@@ -20,6 +20,7 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.sikuli.script.FindFailed;
 
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.mohs10.base.StartBrowser;
@@ -832,6 +833,16 @@ public void click(By locator, String eleName) throws Exception
 		}
 	}
 	
+	
+	//Scroll down method
+	public void Scroll_down(By scroll1) throws FindFailed, InterruptedException
+	{
+	WebElement scroll= driver.findElement(scroll1);
+	JavascriptExecutor js = (JavascriptExecutor) driver;
+	js.executeScript("arguments[0].scrollIntoView();", scroll);
+
+
+	}
 	
 
 }
