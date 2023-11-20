@@ -3,15 +3,15 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="TAF_PDFReport.PDFReportTest">
+      <class name="com.mohs10.scripts.HomeTest">
         <methods>
-          <include name="methodName"/>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-          <include name="PDFreports"/>
           <include name="generateReport"/>
+          <include name="beforeClass"/>
+          <include name="Validate_readlink"/>
+          <include name="afterClass"/>
+          <include name="methodName"/>
         </methods>
-      </class> <!-- TAF_PDFReport.PDFReportTest -->
+      </class> <!-- com.mohs10.scripts.HomeTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
