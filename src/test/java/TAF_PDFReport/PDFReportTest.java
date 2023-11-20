@@ -58,13 +58,8 @@ public class PDFReportTest extends PDFBROWSER {
 	     File filee=new File(htmlpath);
 		 System.out.println("Absolute Path: " + filee.getAbsolutePath());
 		 HTMLPath = filee.getAbsolutePath();
-	driver.get(HTMLPath);
-      //StartBrowser.launchapp("Chrome", HTMLPath);
-		
-		
-		
-		//driver.get(HTMLPath);						  //opening .html file
-		//driver.get("C:\\Users\\91891\\Downloads\\Production-master\\Production-master\\test-output\\Suite\\Test.html");						  //opening .html file
+	     driver.get(HTMLPath);
+      
 
 		String status = driver.findElement(By.xpath("/html/body/table/tbody/tr[1]/td[2]")).getText();     //TestCase status
 		String Timestamp = driver.findElement(By.xpath("/html/body/table/tbody/tr[2]/td[2]")).getText();  //Execution start time

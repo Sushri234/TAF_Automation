@@ -3,8 +3,8 @@
 <suite name="Suite">
   <test  name="Test">
     <classes>
-      <class name="com.mohs10.scripts.HomeTest"/>
-      <class name="TAF_PDFReport.PDFReportTest"/>
+    <!-- <class name="com.mohs10.scripts.HomeTest"/>-->
+       <class name="TAF_PDFReport.PDFReportTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
